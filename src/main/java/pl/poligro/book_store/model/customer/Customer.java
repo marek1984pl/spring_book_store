@@ -9,12 +9,14 @@ package pl.poligro.book_store.model.customer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import pl.poligro.book_store.model.order.CustomerOrder;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class Customer {

@@ -8,11 +8,13 @@
 package pl.poligro.book_store.model.order;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import pl.poligro.book_store.model.book.Book;
 
 import javax.persistence.*;
 
 @Data
+@NoArgsConstructor
 @Entity
 public class OrderItem {
 

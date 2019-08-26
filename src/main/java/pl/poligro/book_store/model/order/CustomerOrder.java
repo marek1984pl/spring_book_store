@@ -8,6 +8,7 @@
 package pl.poligro.book_store.model.order;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import pl.poligro.book_store.model.customer.Customer;
 
 import javax.persistence.*;
@@ -15,6 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@NoArgsConstructor
 @Entity
 public class CustomerOrder {
 
