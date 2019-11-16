@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>List of books</title>
+    </head>
+    <body>
+        <a th:href="@{/}">Index</a>
+        <a th:href="@{/books}">Book list</a>
+        <a th:href="@{/addBook}">Add new book</a>
+        <br/>
+        <p th:text="${sampleText}"></p>
+        <p th:if="${a} < ${b}" th:text="${a} + ' jest mniejsze od ' + ${b}"></p>
+        <p th:if="${a} < ${b}" th:text="|${a} jest mniejsze od ${b}|"></p>
+    </body>
+</html>

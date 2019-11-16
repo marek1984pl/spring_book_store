@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>List of books</title>
-</head>
-<body>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Author</th>
-            <th>Year</th>
-            <th>Publisher</th>
-            <th>ISBN</th>
-            <th>Pages</th>
-        </tr>
-        <tr th:each="book : ${books}">
-            <td th:text="${book.getId()}"></td>
-            <td th:text="${book.getName()}"></td>
-            <td th:text="${book.getAuthor()}"></td>
-            <td th:text="${book.getYear()}"></td>
-            <td th:text="${book.getPublisher()}"></td>
-            <td th:text="${book.getIsbn()}"></td>
-            <td th:text="${book.getNumberOfPages()}"></td>
-        </tr>
-    </table>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>List of books</title>
+    </head>
+    <body>
+        <a th:href="@{/}">Index</a>
+        <a th:href="@{/books}">Book list</a>
+        <a th:href="@{/addBook}">Add new book</a>
+
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th>Publisher</th>
+                <th>ISBN</th>
+                <th>Pages</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+            <tr th:each="book : ${books}">
+                <td th:text="${book.getId()}"></td>
+                <td th:text="${book.getName()}"></td>
+                <td th:text="${book.getAuthor()}"></td>
+                <td th:text="${book.getYear()}"></td>
+                <td th:text="${book.getPublisher()}"></td>
+                <td th:text="${book.getIsbn()}"></td>
+                <td th:text="${book.getNumberOfPages()}"></td>
+                <td><a th:href="@{/deleteBook/__${book.getId()}__}">Delete</a></td>
+                <td><a th:href="@{/editBook/__${book.getId()}__}">Edit</a></td>
+            </tr>
+        </table>
+    </body>
 </html>

@@ -36,4 +36,9 @@ public class Book {
     private Long isbn;
 
     private Integer numberOfPages;
+
+    public Book(String name, String author) {
+        this.name = name;
+        this.author = author;
+    }
 }
